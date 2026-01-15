@@ -8,7 +8,7 @@ trait TraitDirectedWeightedGraph {
   override def toString: String = {
     val builder = new StringBuilder
     builder.append(s"Graphe dirigé pondéré (_size = $size):\n")
-    for (vertex <- 0 until size) {
+    for (vertex <- 1 until size) {
       val edges = getSuccessors(vertex).map { case (dest, w) => s"$dest($w)" }.mkString(", ")
       builder.append(s"$vertex -> [$edges]\n")
     }

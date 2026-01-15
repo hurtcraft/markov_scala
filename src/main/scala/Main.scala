@@ -1,5 +1,5 @@
 import factorys.FactoryDirectedWeightedGraph
-import models.ListDirectedWeightedGraph
+import models.{ListDirectedWeightedGraph, MatrixDirectedWeightedGraph}
 import traits.TraitDirectedWeightedGraph
 
 object Main {
@@ -8,7 +8,9 @@ object Main {
     val file=args(0);
     println("tata");
     val listG:ListDirectedWeightedGraph=FactoryDirectedWeightedGraph.createListDirectedWeightedGraphFromFile(file);
+    val listM:MatrixDirectedWeightedGraph=FactoryDirectedWeightedGraph.createMatrixDirectedWeightedGraphFromFile(file);
     println(listG);
+    println(listM);
   }
 
 
